@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+    <ul>
+        {% for result in results %}
+        <li>
+            <strong>Title:</strong> {{ result.title }}<br>
+            <strong>Author:</strong> {{ result.author }}<br>
+            <strong>Description:</strong> {{ result.description }}<br>
+            <strong>ISBN:</strong> {{ result.ISBN }}<br>
+            <strong>Year:</strong> {{ result.year }}<br>
+            <strong>Publisher:</strong> {{ result.publisher }}<br>
+            <strong>Image link:</strong> <a href="{{ result.img_link }}" target="_blank">{{ result.img_link }}</a><br>
+            <strong>PDF link:</strong> <a href="{{ result.pdf_link }}" target="_blank">{{ result.pdf_link }}</a><br>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
